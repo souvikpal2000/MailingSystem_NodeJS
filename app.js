@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 async function sendMail() {
 	try{
 		let info = await transporter.sendMail({
-    		from: "certifier.mailer@gmail.com",
+    		from: process.env.USER_EMAIL,
     		to: "berasumit956@gmail.com",
     		subject: "Mailing System using NodeJS",
     		text: "Hello, My Friend",
